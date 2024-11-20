@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriBid - Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+            <label for="role">Role:</label>
+            <select id="role" required>
+                <option value="farmer">Farmer</option>
+                <option value="vendor">Vendor</option>
+            </select><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <a href="#" id="logout-link" class="hidden">Logout</a>
+
+    <!-- Farmer Dashboard -->
+    <div id="farmer-dashboard" class="hidden">
+        <h2>Farmer Dashboard</h2>
+        <form id="add-product-form">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" required><br>
+            <label for="product-price">Price:</label>
+            <input type="number" id="product-price" required><br>
+            <button type="submit">Add Product</button>
+        </form>
+
+        <h3>Your Products</h3>
+        <ul id="farmer-products-list"></ul>
+
+        <h3>Bid Details</h3>
+        <ul id="farmer-bid-details-list"></ul>
+    </div>
+
+    <!-- Vendor Dashboard -->
+    <div id="vendor-dashboard" class="hidden">
+        <h2>Vendor Dashboard</h2>
+        <h3>Products for Bidding</h3>
+        <ul id="vendor-products-list"></ul>
+
+        <h3>Your Bids</h3>
+        <ul id="vendor-bid-details-list"></ul>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
